@@ -3,29 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chuck Norris Facts</title>
+  <title>Chuck Norris App 💥</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="overlay"></div>
+  <nav>
+    <button onclick="Home()">🏠 Inicio</button>
+    <button onclick="Peliculas()">🎬 Películas</button>
+    <button onclick="Frases()">💬 Frases Épicas</button>
+    <button onclick="Galeria()">🖼️ Galería</button>
+    <button onclick="Curiosidades()">🤯 Curiosidades</button>
+    <button onclick="Favoritos()">❤️ Favoritos</button>
+  </nav>
 
-  <header>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Chuck_Norris_2015.png" alt="Chuck Norris" class="logo">
-    <h1>Chuck Norris Facts</h1>
-  </header>
-
-  <main>
-    <section id="fact-container">
-      <p id="fact-text">Presiona el botón para desbloquear la leyenda 🥋.</p>
-      <button id="new-fact">⚡ Dame un Fact ⚡</button>
-    </section>
-  </main>
+  <main id="root"></main>
 
   <footer>
-    <p>🔥 Creado por fans, para fans | Chuck Norris aprueba este mensaje 🔥</p>
+    <p>Hecho con 💪 por Ivan Sterling | API: chucknorris.io</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Scripts en el orden correcto -->
+  <script src="App.js"></script>
+  <script src="Home.js"></script>
+  <script src="Peliculas.js"></script>
+  <script src="frases.js"></script>
+  <script src="Galeria.js"></script>
+  <script src="Curiosidades.js"></script>
 </body>
 </html>
-
