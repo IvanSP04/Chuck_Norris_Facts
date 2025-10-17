@@ -3,8 +3,8 @@ function Home() {
   root.innerHTML = `
     <div class="hero">
       <h1>🔥 Bienvenido al Mundo de Chuck Norris</h1>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Chuck_Norris_May_2015.jpg" 
-           alt="Chuck Norris" width="300" style="border-radius:15px; box-shadow: 0 8px 16px rgba(0,0,0,0.3);">
+      <img src="Imagenes/Logo.png" 
+           alt="Chuck Norris" width="300" style="border-radius:15px; box-shadow: 0 8px 16px rgba(229, 62, 48, 0.6); border: 3px solid #E53E30;">
       
       <div class="card">
         <h2>🥋 La Leyenda Viviente</h2>
@@ -34,26 +34,11 @@ function Home() {
       </button>
       <div id="fraseInicio" class="card" style="min-height: 60px;"></div>
 
-      <div class="card" style="margin-top: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+      <div class="card" style="margin-top: 20px; background: linear-gradient(135deg, #E53E30 0%, #ff5545 100%); color: white; border: 2px solid white;">
         <p style="font-size: 1.1em; font-style: italic;">
           "Chuck Norris no duerme. Espera." 😎
         </p>
       </div>
     </div>
-  `;
-}
-
-async function mostrarFraseInicio() {
-  const fraseDiv = document.getElementById("fraseInicio");
-  fraseDiv.innerHTML = `<p style="opacity: 0.5;">Cargando sabiduría de Chuck... 🔄</p>`;
-  
-  const frase = await obtenerFrase();
-  const fraseEscapada = frase.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
-  
-  fraseDiv.innerHTML = `
-    <p style="font-size: 1.1em; font-style: italic;">"${frase}"</p>
-    <button class="btn-secundario" onclick="guardarFavorita('${fraseEscapada}')">
-      💾 Guardar en Favoritas
-    </button>
   `;
 }
